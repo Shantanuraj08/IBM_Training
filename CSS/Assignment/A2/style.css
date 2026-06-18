@@ -1,0 +1,225 @@
+body{
+    border: 8px solid greenyellow;
+    margin: 0;
+    background-image: url("https://tse4.mm.bing.net/th?id=OIP.xddyM5Z5llwe5nz0xAnhvAHaD_&pid=Api&P=0&h=180");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #heading{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+  }
+  
+  #heading-1{
+    border: 7px solid red;
+    border-radius: 35px;
+    height: 150px;
+    width: 350px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: xx-large;
+    background-color: black;
+    color: white;
+    padding-left: 23px;
+  }
+  
+  .h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  #heading-2{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: xx-large;
+    border: 7px solid red;
+    border-radius: 35px;
+    height: 80px;
+    width: 480px;
+       margin-left: -20px;
+    margin-top: 10px;
+    padding-left: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: self-end;
+    justify-content: space-around;
+  }
+  
+  #heading-3{
+      font-weight: bold;
+      font-style: italic;
+      font-size: x-large;
+      height: 150px;
+      width: 400px;
+      border: 7px solid red;
+      border-radius: 35px;
+      background-color: black;
+      color: white;
+  }
+  
+  .h3{
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+  }
+  
+  #excoffer{
+    display: flex;
+  }
+  
+  #offer{
+    height: 430px;
+    width: 430px;
+    border: 7px solid grey;
+    border-radius: 50%;
+    background-color: rgb(70, 160, 160);
+    margin-top: 200px;
+  }
+  
+  .p1{
+    color: black;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-large;
+    font-style: italic;
+    margin-top: 100px;
+    margin-left: 110px;
+  }
+  
+  .p2{
+    color: black;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  
+  .p3{
+    color: black;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 100px;
+    margin-top: 40px;
+  }
+  
+  #regoffer{
+    height: 770px;
+    width: 500px;
+    border: 7px dashed red;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #regh1{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: red;
+  }
+  
+  #reg{
+    width: 500px;
+  }
+  
+  .form-details{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 600;
+    color: red;
+  }
+  
+  .details {
+    display: flex;
+    margin-left: 160px;
+    align-items: center;
+  }
+  
+  .date{
+    display: flex;
+    margin-left: 170px;
+    width: 160px;
+    align-items: center;
+  }
+  
+  .check {
+    margin-left: 240px;
+  }
+  
+  #click {
+    margin-left: 208px;
+  }
+  
+  #reset {
+    margin-left: 227px;
+  }
+  
+  #menu{
+    font-weight: bold;
+    font-size: xx-large;
+    font-style: italic;
+    text-transform: uppercase;
+    height: 100px;
+    width: 500px;
+    border: 7px solid red;
+    border-radius: 35px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 490px;
+    margin-top: 30px;
+  }
+  
+  .menu1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    color: darkblue;
+  }
+  
+  .box1{
+    border: 3px solid darkgreen;
+    border-radius: 35px;
+    background-color: aqua;
+    width: 25%;
+  }
+  
+  .food{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-left: 100px;
+  }
+  
+  li {
+    margin-left: 100px;
+    font-size: larger;
+  }
+  
+  .menu2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    color: darkblue;
+  }
+  
+  .box2{
+    border: 3px solid darkgreen;
+    border-radius: 35px;
+    background-color: aqua;
+    width: 25%;
+  }

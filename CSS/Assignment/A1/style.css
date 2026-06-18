@@ -1,0 +1,52 @@
+h1{
+  color: red;
+}
+
+h2{
+  color: rgb(6, 236, 6);
+  font-style: italic;
+}
+
+span{
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.head{
+  color: red;
+}
+
+.main{
+  letter-spacing: 5px;
+  color: brown;
+}
+
+li span{
+  background-color: yellow;
+}
+
+h3{
+  font-weight: lighter;
+  color: brown;
+}
+
+.box2{
+  font-size: xx-small;
+  color: brown;
+}
+
+.box1{
+  font-style: italic;
+  color: brown;
+}
+
+a{
+  color: brown;
+  background-color: yellow;
+  text-decoration: none;
+}

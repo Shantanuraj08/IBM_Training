@@ -1,0 +1,62 @@
+/* /* p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: wavy;
+    text-decoration-color:black ;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+div{
+    color: rgb(15, 164, 167);
+    padding: 20px;
+    margin: 30px;
+   border: 5px dotted rgb(26, 80, 169);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: url(https://imgs.search.brave.com/VbHfddg3VQNNzUYPOG3Jl_DNstPb7oPeaN4LfYv2-a0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMzkw/NDYuanBn);
+} */
+
+.main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.card1 , .card2 ,.card3 {
+ height: 100px;
+ width: 100px;
+ background-color: mediumseagreen;
+ margin: 10px;
+} */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+}
+
+.navbar-links a:hover {
+    color: #007BFF;
+}
+
