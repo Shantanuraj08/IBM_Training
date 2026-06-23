@@ -57,28 +57,34 @@
 
 
 // Grading System using Switch Statement
-let marks = parseInt(prompt("enter your marks (0-50)"))
-let grade;
+// let marks = parseInt(prompt("enter your marks (0-50)"))
+// let grade;
 
-switch(true){
-    case marks >= 45 && marks <= 50:
-        grade = "A+"
-        break
-    case marks >= 40 && marks < 45:
-        grade = "A"
-        break
-    case marks >= 35 && marks < 40:
-        grade = "B"
-        break
-    case marks >= 30 && marks < 35:
-        grade = "C"
-        break
-    case marks >= 25 && marks < 30:
-        grade = "D"
-        break
-    default:
-        grade = "F"
+// switch(true){
+//     case marks >= 45 && marks <= 50:
+//         grade = "A+"
+//         break
+//     case marks >= 40 && marks < 45:
+//         grade = "A"
+//         break
+//     case marks >= 35 && marks < 40:
+//         grade = "B"
+//         break
+//     case marks >= 30 && marks < 35:
+//         grade = "C"
+//         break
+//     case marks >= 25 && marks < 30:
+//         grade = "D"
+//         break
+//     default:
+//         grade = "F"
+// }
+
+// console.log("Your marks: " + marks)
+// console.log("Your grade: " + grade)
+
+
+let Num=5;
+for(let i=1;i<Num;i++){
+    console.log(i)
 }
-
-console.log("Your marks: " + marks)
-console.log("Your grade: " + grade)
