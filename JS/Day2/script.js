@@ -88,3 +88,13 @@ let Num=5;
 for(let i=1;i<Num;i++){
     console.log(i)
 }
+
+
+let obj={
+    name:"Raj",
+    Age:12,
+    email:"work23312@gmail.com"
+}
+for(let key in obj){
+    console.log(`${key}=${obj[key]}`)
+}
