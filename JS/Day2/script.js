@@ -84,17 +84,43 @@
 // console.log("Your grade: " + grade)
 
 
-let Num=5;
-for(let i=1;i<Num;i++){
-    console.log(i)
-}
+// let Num=5;
+// for(let i=1;i<Num;i++){
+//     console.log(i)
+// }
 
 
-let obj={
-    name:"Raj",
-    Age:12,
-    email:"work23312@gmail.com"
-}
-for(let key in obj){
-    console.log(`${key}=${obj[key]}`)
-}
+// let obj={
+//     name:"Raj",
+//     Age:12,
+//     email:"work23312@gmail.com"
+// }
+// for(let key in obj){
+//     console.log(`${key}=${obj[key]}`)
+// }
+
+
+
+// let str = "apes strong together"
+// let str2="I am Shantanu Raj"
+// let res=str.indexOf("apes")
+// let res2=str2.indexOf("shantanu Raj")
+// console.log(res)
+// console.log(res2)
+
+
+// var str3="hello"
+// var str4="raj"
+// var res3=str3.concat(str4)
+// console.log(res3)
+
+var name="one piece chapter 1187"
+
+var nm=name.slice(3,15)
+console.log(nm)
+
+
+let n="you will be amazing devloper"
+// let nn= n.replaceAll(' ','-')
+
+let nn=n.split(" ")
