@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        #cardContainer {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        #cardContainer.vertical {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .card {
+            width: 260px;
+            border: 1px solid #d0d0d0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="actions">
+        <button onclick="change()">Add Card</button>
+        <button onclick="arrange()">Vertical</button>
+    </div>
+
+    <div id="cardContainer"></div>
+    <script src="index.js"></script>
+</body>
+</html>
