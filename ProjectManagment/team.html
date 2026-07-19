@@ -53,15 +53,25 @@
 
       <!-- Teams column -->
       <div>
-        <div class="card card-pad" style="margin-bottom:20px;">
-          <div class="section-title"><i class="fa-solid fa-plus"></i> Create a new team</div>
-          <div class="inline-form">
-            <input type="text" id="team-name-input" class="text-field" style="flex:1; min-width:180px;" />
-            <input type="text" id="team-project-name-input" class="text-field" style="flex:1; min-width:180px;" />
-            <button id="create-team-btn" class="btn btn-primary btn-sm">Create team</button>
+            <div class="card card-pad" style="margin-bottom:20px;">
+            <div class="section-title">
+              <i class="fa-solid fa-plus"></i> Create Team
+            </div>
+          
+            <div class="inline-form">
+              <input
+                type="text"
+                id="team-name-input"
+                class="text-field"
+                placeholder="Team name"
+                style="flex:1; min-width:220px;"
+              />
+          
+              <button id="create-team-btn" class="btn btn-primary btn-sm">
+                Create Team
+              </button>
+            </div>
           </div>
-          <div class="form-help">Optional: assign a project while creating the team.</div>
-        </div>
 
         <div class="section-title" style="margin-top:4px;"><i class="fa-solid fa-people-group"></i> Teams &amp; members</div>
         <div id="team-list"></div>

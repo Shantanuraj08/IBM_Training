@@ -19,26 +19,21 @@ document.addEventListener("DOMContentLoaded", () => {
 function bindCreateTeam() {
   document.getElementById("create-team-btn").addEventListener("click", () => {
     const input = document.getElementById("team-name-input");
-    const projectInput = document.getElementById("team-project-name-input");
     const name = input.value.trim();
-    const projectName = projectInput.value.trim();
 
     if (!name) {
       showToast("Enter a team name");
       return;
     }
 
-    const team = Teams.create(name);
-    if (projectName) {
-      Projects.upsertByName(projectName, team.id);
-    }
+    Teams.create(name);
 
     input.value = "";
-    projectInput.value = "";
+
     renderTeams();
     renderTeamSelect();
-    renderProjects();
-    showToast(projectName ? "Team created and project linked" : "Team created");
+
+    showToast("Team created");
   });
 }
 
