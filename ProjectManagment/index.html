@@ -23,8 +23,8 @@
     <a href="#cta">Get started</a>
   </nav>
   <div class="landing-actions">
-    <a href="auth.html" class="btn btn-outline btn-sm">Sign in</a>
-    <a href="auth.html" class="btn btn-primary btn-sm">Register</a>
+    <a href="auth.html?mode=signin" class="btn btn-outline btn-sm" id="nav-signin">Sign in</a>
+    <a href="auth.html?mode=register" class="btn btn-primary btn-sm" id="nav-register">Register</a>
   </div>
 </header>
 
@@ -37,7 +37,7 @@
         PM Dashboard keeps your projects, teams, task board, and progress in one place.
       </p>
       <div class="hero-actions" id="cta">
-        <a href="auth.html" class="btn btn-primary">Start using the app</a>
+        <a href="auth.html?mode=register" class="btn btn-primary" id="hero-cta">Start using the app</a>
         <a href="#preview" class="btn btn-outline">See the workspace</a>
       </div>
       <div class="hero-metrics">
@@ -118,7 +118,9 @@
     </div>
   </section>
 
-  <footer class="landing-footer">
+  
+</main>
+<footer class="landing-footer">
     <div class="footer-brand footer-top">
       <img src="assets/logo.svg" alt="PM Dashboard logo" />
       <div>
@@ -126,7 +128,7 @@
         <p>Plan, assign, and deliver work from one place, with the same clarity your team gets in the workspace.</p>
       </div>
       <div class="footer-cta">
-        <a href="auth.html" class="btn btn-primary">Start free</a>
+        <a href="auth.html?mode=register" class="btn btn-primary" id="footer-cta">Start free</a>
         <a href="#features" class="btn btn-outline btn-dark-outline">Explore features</a>
       </div>
     </div>
@@ -134,7 +136,7 @@
     <div class="footer-grid">
       <div class="footer-column">
         <h4>Product</h4>
-        <a href="#features">Features</a><a href="#preview">Live preview</a><a href="auth.html">Register</a><a href="auth.html">Sign in</a>
+        <a href="#features">Features</a><a href="#preview">Live preview</a><a href="auth.html?mode=register">Register</a><a href="auth.html?mode=signin">Sign in</a>
       </div>
       <div class="footer-column">
         <h4>Workspace</h4>
@@ -155,7 +157,31 @@
       <div class="footer-meta-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
     </div>
   </footer>
-</main>
+<script src="js/storage.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navSignin = document.getElementById("nav-signin");
+    const navRegister = document.getElementById("nav-register");
+    const heroCta = document.getElementById("hero-cta");
+    const footerCta = document.getElementById("footer-cta");
 
+    if (Session.get()) {
+      if (navSignin) navSignin.style.display = "none";
+      if (navRegister) {
+        navRegister.textContent = "Go to Dashboard";
+        navRegister.href = "dashboard.html";
+        navRegister.classList.remove("btn-sm");
+      }
+      if (heroCta) {
+        heroCta.textContent = "Go to Dashboard";
+        heroCta.href = "dashboard.html";
+      }
+      if (footerCta) {
+        footerCta.textContent = "Go to Dashboard";
+        footerCta.href = "dashboard.html";
+      }
+    }
+  });
+</script>
 </body>
 </html>

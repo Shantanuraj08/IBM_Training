@@ -51,20 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
       ? "Create one local account for this browser. After that, use Sign in."
       : "If you have not registered yet, switch to Register first.";
 
-    if (!isRegister) {
-      const savedUser = Auth.get();
-      if (savedUser) {
-        document.getElementById("signin-email").value = savedUser.email || "";
-        document.getElementById("signin-password").value = savedUser.password || "";
-      }
-    }
+
   }
 
   registerBtn.addEventListener("click", () => setMode("register"));
   signinBtn.addEventListener("click", () => setMode("signin"));
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const modeParam = urlParams.get("mode");
   const storedUser = Auth.get();
-  setMode(storedUser ? "signin" : "register");
+
+  if (modeParam === "register") {
+    setMode("register");
+  } else if (modeParam === "signin") {
+    setMode("signin");
+  } else {
+    setMode(storedUser ? "signin" : "register");
+  }
 
   registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -93,8 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     successBox.classList.add("show");
     registerForm.reset();
     setMode("signin");
-    document.getElementById("signin-email").value = email;
-    document.getElementById("signin-password").value = password;
   });
 
   signinForm.addEventListener("submit", (e) => {
