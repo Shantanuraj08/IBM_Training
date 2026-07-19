@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Task Board · PM Dashboard</title>
+<link rel="icon" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <img src="assets/logo.svg" alt="logo" />
+      <span>PM Dashboard</span>
+    </div>
+
+    <nav class="sidebar__nav">
+      <a href="dashboard.html" class="sidebar__link"><span class="icon"><i class="fa-solid fa-house"></i></span> Dashboard</a>
+      <a href="kanban.html" class="sidebar__link active"><span class="icon"><i class="fa-solid fa-table-columns"></i></span> Task Board</a>
+      <a href="team.html" class="sidebar__link"><span class="icon"><i class="fa-solid fa-people-group"></i></span> Teams &amp; Projects</a>
+      <a href="tracker.html" class="sidebar__link"><span class="icon"><i class="fa-solid fa-chart-line"></i></span> Project Progress</a>
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user">
+        <div class="sidebar__avatar" id="sidebar-avatar">--</div>
+        <div>
+          <div class="sidebar__user-name" id="sidebar-user-name">—</div>
+          <div class="sidebar__user-role" id="sidebar-user-role">—</div>
+        </div>
+      </div>
+      <button class="btn-logout" id="logout-btn">Log out</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1>Task board</h1>
+        <p>Drag tasks between columns to update their status.</p>
+      </div>
+    </div>
+
+    <div class="kanban-toolbar">
+      <select id="project-select" class="select-field"></select>
+      <input type="text" id="new-task-title" class="text-field" style="min-width:220px;" />
+      <select id="new-task-assignee" class="select-field"></select>
+      <button id="add-task-btn" class="btn btn-primary btn-sm"><i class="fa-solid fa-plus"></i> Add task</button>
+    </div>
+
+    <div id="no-project-msg" class="empty-state" style="display:none;">
+      <div class="icon"><i class="fa-solid fa-table-columns"></i></div>
+      <h3>No project selected</h3>
+      <p>Create a team and a project first to start planning tasks.</p>
+      <a href="team.html" class="btn btn-primary btn-sm">Go to Teams &amp; Projects</a>
+    </div>
+
+    <div class="kanban-board" id="kanban-board">
+      <div class="kanban-col" data-status="todo">
+        <div class="kanban-col__head">
+          <div class="label"><span class="status-dot dot-todo"></span> To Do</div>
+          <span class="count-pill" id="count-todo">0</span>
+        </div>
+        <div class="kanban-col__body" id="col-todo"></div>
+      </div>
+
+      <div class="kanban-col" data-status="inprogress">
+        <div class="kanban-col__head">
+          <div class="label"><span class="status-dot dot-progress"></span> In Progress</div>
+          <span class="count-pill" id="count-inprogress">0</span>
+        </div>
+        <div class="kanban-col__body" id="col-inprogress"></div>
+      </div>
+
+      <div class="kanban-col" data-status="done">
+        <div class="kanban-col__head">
+          <div class="label"><span class="status-dot dot-done"></span> Done</div>
+          <span class="count-pill" id="count-done">0</span>
+        </div>
+        <div class="kanban-col__body" id="col-done"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/kanban.js"></script>
+</body>
+</html>

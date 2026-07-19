@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PM Dashboard</title>
+<link rel="icon" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+<header class="landing-header">
+  <div class="landing-brand">
+    <img src="assets/logo.svg" alt="logo" />
+    <span>PM Dashboard</span>
+  </div>
+  <nav class="landing-nav">
+    <a href="#features">Features</a>
+    <a href="#preview">Preview</a>
+    <a href="#cta">Get started</a>
+  </nav>
+  <div class="landing-actions">
+    <a href="auth.html" class="btn btn-outline btn-sm">Sign in</a>
+    <a href="auth.html" class="btn btn-primary btn-sm">Register</a>
+  </div>
+</header>
+
+<main class="landing-page">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Project planning</div>
+      <h1>Plan work, assign ownership, and track delivery in one workspace.</h1>
+      <p>
+        PM Dashboard keeps your projects, teams, task board, and progress in one place.
+      </p>
+      <div class="hero-actions" id="cta">
+        <a href="auth.html" class="btn btn-primary">Start using the app</a>
+        <a href="#preview" class="btn btn-outline">See the workspace</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span class="metric-value">4</span>
+          <span class="metric-label">views</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">1</span>
+          <span class="metric-label">workspace</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">0</span>
+          <span class="metric-label">backend</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-panel" id="preview">
+      <div class="preview-card preview-card--accent">
+        <div class="preview-topline">Overview</div>
+        <div class="preview-title">Work in motion</div>
+        <div class="preview-body">
+          Track project status, assign teams, and move tasks across the board.
+        </div>
+        <div class="preview-tags">
+          <span>Task Board</span>
+          <span>Teams &amp; Projects</span>
+          <span>Project Progress</span>
+        </div>
+      </div>
+      <div class="preview-grid">
+        <article class="info-tile">
+          <i class="fa-solid fa-table-columns"></i>
+          <h3>Task Board</h3>
+          <p>Move work from to-do to done.</p>
+        </article>
+        <article class="info-tile">
+          <i class="fa-solid fa-people-group"></i>
+          <h3>Teams</h3>
+          <p>Create teams and link projects immediately.</p>
+        </article>
+        <article class="info-tile">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Progress</h3>
+          <p>See completion without extra setup.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="section-heading">
+      <span>What you get</span>
+      <h2>Everything needed to move from planning to delivery.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Fast onboarding</h3>
+        <p>Register locally and jump into the workspace in minutes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Project clarity</h3>
+        <p>Teams, projects, and task progress stay connected.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Focused navigation</h3>
+        <p>Move smoothly between the landing page and your dashboard without friction.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Visual task flow</h3>
+        <p>Keep work moving with a clear board that shows status at a glance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Shared team context</h3>
+        <p>Bring every contributor into one space with shared ownership.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="landing-footer">
+    <div class="footer-brand footer-top">
+      <img src="assets/logo.svg" alt="PM Dashboard logo" />
+      <div>
+        <span class="landing-footer-title">PM Dashboard</span>
+        <p>Plan, assign, and deliver work from one place, with the same clarity your team gets in the workspace.</p>
+      </div>
+      <div class="footer-cta">
+        <a href="auth.html" class="btn btn-primary">Start free</a>
+        <a href="#features" class="btn btn-outline btn-dark-outline">Explore features</a>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Product</h4>
+        <a href="#features">Features</a><a href="#preview">Live preview</a><a href="auth.html">Register</a><a href="auth.html">Sign in</a>
+      </div>
+      <div class="footer-column">
+        <h4>Workspace</h4>
+        <a href="kanban.html">Kanban board</a><a href="team.html">Team view</a><a href="tracker.html">Progress tracker</a><a href="dashboard.html">Dashboard home</a>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="#">About PM Dashboard</a><a href="#">Contact support</a><a href="#">Help center</a><a href="#">Careers</a>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <span>support@pmdashboard.app</span><span>Mon - Fri, 9:00 AM - 6:00 PM</span><span>Built for small teams and growing projects</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 PM Dashboard. All rights reserved.</span>
+      <div class="footer-meta-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>

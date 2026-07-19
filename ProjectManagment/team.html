@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teams &amp; Projects · PM Dashboard</title>
+<link rel="icon" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <img src="assets/logo.svg" alt="logo" />
+      <span>PM Dashboard</span>
+    </div>
+
+    <nav class="sidebar__nav">
+      <a href="dashboard.html" class="sidebar__link"><span class="icon"><i class="fa-solid fa-house"></i></span> Dashboard</a>
+      <a href="kanban.html" class="sidebar__link"><span class="icon"><i class="fa-solid fa-table-columns"></i></span> Task Board</a>
+      <a href="team.html" class="sidebar__link active"><span class="icon"><i class="fa-solid fa-people-group"></i></span> Teams &amp; Projects</a>
+      <a href="tracker.html" class="sidebar__link"><span class="icon"><i class="fa-solid fa-chart-line"></i></span> Project Progress</a>
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="sidebar__user">
+        <div class="sidebar__avatar" id="sidebar-avatar">--</div>
+        <div>
+          <div class="sidebar__user-name" id="sidebar-user-name">—</div>
+          <div class="sidebar__user-role" id="sidebar-user-role">—</div>
+        </div>
+      </div>
+      <button class="btn-logout" id="logout-btn">Log out</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1>Teams &amp; projects</h1>
+        <p>Create teams, add members, and assign projects to a team.</p>
+      </div>
+    </div>
+
+    <div class="two-col">
+
+      <!-- Teams column -->
+      <div>
+        <div class="card card-pad" style="margin-bottom:20px;">
+          <div class="section-title"><i class="fa-solid fa-plus"></i> Create a new team</div>
+          <div class="inline-form">
+            <input type="text" id="team-name-input" class="text-field" style="flex:1; min-width:180px;" />
+            <input type="text" id="team-project-name-input" class="text-field" style="flex:1; min-width:180px;" />
+            <button id="create-team-btn" class="btn btn-primary btn-sm">Create team</button>
+          </div>
+          <div class="form-help">Optional: assign a project while creating the team.</div>
+        </div>
+
+        <div class="section-title" style="margin-top:4px;"><i class="fa-solid fa-people-group"></i> Teams &amp; members</div>
+        <div id="team-list"></div>
+      </div>
+
+      <!-- Projects column -->
+      <div>
+        <div class="card card-pad" style="margin-bottom:20px;">
+          <div class="section-title"><i class="fa-solid fa-diagram-project"></i> Create a project &amp; assign a team</div>
+          <div class="form-row">
+            <label for="project-name-input">Project name</label>
+            <input type="text" id="project-name-input" />
+          </div>
+          <div class="form-row">
+            <label for="project-desc-input">Description</label>
+            <textarea id="project-desc-input" rows="2"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="project-team-select">Assign to team</label>
+            <select id="project-team-select"></select>
+          </div>
+          <button id="create-project-btn" class="btn btn-primary btn-sm">Create project</button>
+        </div>
+
+        <div class="card card-pad">
+          <div class="section-title"><i class="fa-solid fa-list-ul"></i> Existing projects</div>
+          <div id="project-list-team-page"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- ============ ADD MEMBER MODAL ============ -->
+<div class="modal-overlay" id="member-modal">
+  <div class="modal-box">
+    <h2>Add team member</h2>
+    <div class="form-row">
+      <label for="member-name-input">Member name</label>
+      <input type="text" id="member-name-input" />
+    </div>
+    <div class="form-row">
+      <label for="member-role-input">Role</label>
+      <input type="text" id="member-role-input" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-outline btn-sm" id="cancel-member-btn">Cancel</button>
+      <button class="btn btn-primary btn-sm" id="save-member-btn">Add member</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/team.js"></script>
+</body>
+</html>
