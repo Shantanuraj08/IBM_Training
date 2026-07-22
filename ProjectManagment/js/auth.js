@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerBtn = document.getElementById("show-register-btn");
   const signinBtn = document.getElementById("show-signin-btn");
   const authTitle = document.getElementById("auth-title");
-  const authCopy = document.getElementById("auth-copy");
+  // const authCopy = document.getElementById("auth-copy");
   const authHint = document.getElementById("auth-hint");
 
   function clearMessages() {
@@ -34,25 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
     successBox.classList.remove("show");
   }
 
-  function setMode(mode) {
-    clearMessages();
-    const isRegister = mode === "register";
+ function setMode(mode) {
+  clearMessages();
 
-    registerForm.classList.toggle("hidden", !isRegister);
-    signinForm.classList.toggle("hidden", isRegister);
-    registerBtn.classList.toggle("active", isRegister);
-    signinBtn.classList.toggle("active", !isRegister);
+  const isRegister = mode === "register";
 
-    authTitle.textContent = isRegister ? "Create your account" : "Welcome back";
-    authCopy.textContent = isRegister
-      ? "Register first, then sign in with the account you saved in this browser."
-      : "Sign in with the local account created on this browser.";
-    authHint.textContent = isRegister
-      ? "Create one local account for this browser. After that, use Sign in."
-      : "If you have not registered yet, switch to Register first.";
+ 
+  registerForm.classList.toggle("hidden", !isRegister);
+  signinForm.classList.toggle("hidden", isRegister);
 
+  registerBtn.classList.toggle("active", isRegister);
+  signinBtn.classList.toggle("active", !isRegister);
 
-  }
+  authTitle.textContent = isRegister
+    ? "Create your account"
+    : "Welcome back";
+
+authHint.innerHTML = isRegister
+  ? `<a href="#" id="toggle-link">Already have an account? Sign in</a>`
+  : `<a href="#" id="toggle-link">Don't have an account? Create one</a>`;
+
+  document.getElementById("toggle-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    setMode(isRegister ? "signin" : "register");
+  });
+}
 
   registerBtn.addEventListener("click", () => setMode("register"));
   signinBtn.addEventListener("click", () => setMode("signin"));
@@ -84,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (Auth.get()) {
-      errorBox.textContent = "A local account already exists in this browser. Sign in instead.";
+      errorBox.textContent = "A local account already . Sign in instead.";
       errorBox.classList.add("show");
       setMode("signin");
       return;
@@ -106,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const user = Auth.get();
 
     if (!user) {
-      errorBox.textContent = "No account has been registered on this browser. Please register first.";
+      errorBox.textContent = "No account has been registered  Please register first.";
       errorBox.classList.add("show");
       setMode("register");
       return;

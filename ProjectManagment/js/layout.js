@@ -1,9 +1,4 @@
-/* =========================================================
-   layout.js
-   Shared sidebar behaviour: guard the page, fill in the
-   logged-in user's info, and wire up logout.
-   Included on every page except the login page.
-   ========================================================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const user = Session.requireLogin();

@@ -1,8 +1,4 @@
-/* =========================================================
-   tracker.js — progress tracking logic
-   Each project's completion is derived purely from how many
-   of its tasks currently sit in the "done" column.
-   ========================================================= */
+
 
 const RING_RADIUS = 30;
 const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;

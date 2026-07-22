@@ -1,8 +1,3 @@
-/* =========================================================
-   kanban.js — kanban board logic
-   Renders columns for the selected project and supports
-   native HTML5 drag-and-drop to change task status.
-   ========================================================= */
 
 const STATUSES = ["todo", "inprogress", "done"];
 const BORDER_CLASS = { todo: "border-todo", inprogress: "border-progress", done: "border-done" };

@@ -1,9 +1,4 @@
-/* =========================================================
-   storage.js
-   A tiny data-access layer built on localStorage.
-   This acts as our "database" since the site is fully static.
-   Every page includes this file before its own script.
-   ========================================================= */
+
 
 const DB_KEYS = {
   session: "pmd_session",

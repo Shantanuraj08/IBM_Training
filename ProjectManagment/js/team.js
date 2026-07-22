@@ -1,6 +1,4 @@
-/* =========================================================
-   team.js — team creation & project allocation logic
-   ========================================================= */
+
 
 let activeTeamIdForModal = null;
 

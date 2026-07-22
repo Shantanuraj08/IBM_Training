@@ -1,6 +1,4 @@
-/* =========================================================
-   home.js — dashboard overview logic
-   ========================================================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   seedDemoData();
